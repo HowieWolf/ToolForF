@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <Button
+            android:id="@+id/enableListener"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:text="开启监听短信" />
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/test"
+            android:background="@color/colorPrimary"
+            android:text="这是测试内容"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:text="下面是配置项" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="配置一：过滤的电话号码。比如下面写 13161108860，表示只有这个号码的短信回被提醒；如果什么都不写，则所有的短信都会被提醒。如果写 13161108860；13112345678 中间用分号隔开，表示这两个号码的短信都会被提醒，其他的号码不会被提醒。" />
+
+        <EditText
+            android:id="@+id/filterNumbers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入需要过滤的电话号码" />
+
+        <TextView
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="配置二：过滤短信的关键字。比如下面填写'王辉'，那么只有短信中包含'王辉'这两个字，才会提醒。如果下面什么都不填，则所有短信都提醒。也可以有多个关键词，例如'王辉；王皓'两个词用分号隔开，表示短信中包含'王辉'或'王皓'的短信会被提醒。" />
+
+        <EditText
+            android:id="@+id/filter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入过滤词" />
+
+        <TextView
+            android:layout_marginTop="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="如果修改了上方的配置，请保存" />
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="保存" />
+
+    </LinearLayout>
+</ScrollView>
