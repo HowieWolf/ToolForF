@@ -39,7 +39,11 @@ class MainActivity : AppCompatActivity() {
             return
         }
         requestPermissions(
-            arrayOf(Manifest.permission.READ_SMS, Manifest.permission.RECEIVE_SMS),
+            arrayOf(
+                Manifest.permission.READ_SMS,
+                Manifest.permission.RECEIVE_SMS,
+                Manifest.permission.READ_EXTERNAL_STORAGE
+            ),
             11111
         )
     }
